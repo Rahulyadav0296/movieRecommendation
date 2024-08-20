@@ -17,3 +17,17 @@
   width: 550px; /* Adjust width as needed */
   height: auto;
 }
+
+@media (max-width: 768px) {
+  .loading-container img {
+    width: 80%; /* Adjust the width to 80% of the viewport width */
+    max-width: 350px; /* Maximum width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .loading-container img {
+    width: 70%; /* Further adjust the width for very small screens */
+    max-width: 300px; /* Maximum width for very small screens */
+  }
+}
