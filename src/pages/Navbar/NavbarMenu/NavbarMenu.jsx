@@ -7,25 +7,18 @@ import "./NavbarMenu.css";
 function NavbarMenu() {
   const showMenu = useSelector((state) => state.auth.showMenu);
   const movies = useSelector((state) => state.auth.movies);
+  const originalMovies = useSelector((state) => state.auth.originalMovies);
   const [search, setSearch] = useState("");
-  const [noResultsMessage, setNoResultsMessage] = useState("");
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleSearch = (e) => {
     e.preventDefault();
-    const filterMovies = movies.filter((movie) =>
+    const filterMovies = originalMovies.filter((movie) =>
       movie.title.toLowerCase().includes(search.toLowerCase())
     );
 
-    if (filterMovies.length === 0) {
-      setNoResultsMessage("No results found.");
-      dispatch(setMovies(movies)); // Clear movies if no results
-    } else {
-      setNoResultsMessage("");
-      dispatch(setMovies(filterMovies));
-    }
-
+    dispatch(setMovies(filterMovies));
     setSearch(""); // Clear search input
     dispatch(setShowMenu(!showMenu)); // Toggle menu visibility
   };
