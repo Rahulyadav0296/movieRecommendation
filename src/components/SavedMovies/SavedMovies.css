@@ -1,0 +1,115 @@
+/* Container for saved movies list */
+.saved-movies-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 0 auto; /* Center container on the page */
+}
+
+/* Title for saved movies section */
+.saved-movies-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+/* List of saved movies */
+.saved-movies-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual saved movie item */
+.saved-movie-item {
+  display: flex;
+  flex-direction: column; /* Stack movie poster and info vertically on small screens */
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+/* Poster image of the saved movie */
+.saved-movie-poster {
+  width: 100%; /* Full width on small screens */
+  max-width: 150px;
+  border-radius: 10px;
+  margin-bottom: 15px; /* Space between image and info */
+}
+
+/* Information about the saved movie */
+.saved-movie-info {
+  flex: 1;
+}
+
+/* Title of the saved movie */
+.saved-movie-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Other details of the saved movie */
+.saved-movie-language,
+.saved-movie-original-title,
+.saved-movie-year,
+.saved-movie-ratings,
+.saved-movie-vote-count,
+.saved-movie-overview {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #666;
+}
+
+/* Button to remove the saved movie */
+.remove-movie-button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the remove button */
+.remove-movie-button:hover {
+  background-color: #c0392b;
+}
+
+/* Message when there are no saved movies */
+.no-saved-movies {
+  font-size: 1.2rem;
+  color: #777;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .saved-movie-item {
+    flex-direction: row; /* Align items horizontally on medium screens and up */
+  }
+
+  .saved-movie-poster {
+    width: 150px; /* Fixed width for the poster image */
+    margin-bottom: 0; /* Remove bottom margin */
+    margin-right: 20px; /* Add space between poster and info */
+  }
+}
+
+@media (min-width: 1200px) {
+  .saved-movies-container {
+    padding: 30px; /* Add more padding on larger screens */
+  }
+}

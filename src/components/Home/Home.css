@@ -1,0 +1,37 @@
+/* Container for the entire home page */
+.home-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+/* Sorting container */
+.sort-container {
+  flex: 1 1 20%;
+  min-width: 20%;
+}
+
+/* Movies list container */
+.movies-container {
+  flex: 3 1 75%;
+  display: grid;
+  max-width: 80%;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  /* Stack sort and movies in two rows */
+  .home-container {
+    flex-direction: column;
+  }
+
+  /* Sort details should come in a single row */
+  .sort-container {
+    flex: 1 1 100%;
+    min-width: 90%;
+  }
+}

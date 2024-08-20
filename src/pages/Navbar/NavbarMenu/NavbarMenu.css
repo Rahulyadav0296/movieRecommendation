@@ -1,0 +1,129 @@
+/* Container for the entire navbar menu */
+.navbar-menu {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for the list of items */
+.navbar-items-list {
+  display: flex;
+  margin-left: 20px;
+}
+
+/* Styling for each link item */
+.navbar-items-list a {
+  text-decoration: none;
+}
+
+.navbar-items-list-details {
+  padding: 15px;
+  margin-top: 20px;
+  font-size: 1.3rem;
+  font-family: "Rubik", sans-serif;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.no-results-message {
+  color: #ff6347; /* Use a color to make the message stand out */
+  font-size: 1rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.navbar-items-list-details.active {
+  color: #ff6347;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.navbar-items-list-details:hover {
+  color: orange;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between input and button */
+}
+
+/* Style for the input field */
+.search-form__input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  flex: 1; /* Input field takes up available space */
+}
+
+/* Style for the search button */
+.search-form__button {
+  padding: 8px 12px;
+  background-color: #ff6347;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Button hover effect */
+.search-form__button:hover {
+  background-color: #ff4500;
+}
+
+.movie-icon-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent; /* Light gray background */
+  padding: 20px;
+  border-radius: 50%; /* Ensures a round shape */
+  transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+  position: relative; /* Ensures it doesn't affect layout */
+}
+
+.movie-icon-container:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.movie-icon-container svg {
+  color: #ff5722; /* Icon color (e.g., orange) */
+  font-size: 48px; /* Size of the icon */
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
+  /* Ensure navbar items are stacked vertically on small screens */
+  .navbar-menu {
+    flex-direction: column;
+  }
+
+  .navbar-items-list {
+    margin-left: 0; /* Remove left margin on smaller screens */
+    margin-top: 10px; /* Add top margin to separate items */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-items-list-details {
+    padding: 10px; /* Adjust padding for mobile screens */
+    font-size: 1.1rem; /* Slightly smaller font size */
+  }
+
+  .search-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-form__input,
+  .search-form__button {
+    width: 50%;
+  }
+}

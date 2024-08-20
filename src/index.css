@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styles for the loading container */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #ecf0f1;
+}
+
+/* Styles for the loading image */
+.loading-container img {
+  width: 550px; /* Adjust width as needed */
+  height: auto;
+}

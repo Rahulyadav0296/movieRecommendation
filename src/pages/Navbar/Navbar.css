@@ -1,0 +1,91 @@
+/* Navbar Styling */
+.navbar {
+  color: white;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(165deg, #333 50%, #4d4a4a 50%);
+  border-bottom: 2px solid #ff6600; /* Orange border */
+  padding: 10px 20px;
+  position: fixed; /* Ensure the navbar stays at the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensure it stays above other content */
+  height: 60px; /* Adjust height as needed */
+}
+
+.navbar-title {
+  margin-left: 10px;
+  font-size: 18px;
+  font-family: "Radio Canada Big", sans-serif;
+}
+
+.navbar-item {
+  margin-left: 30px;
+  margin-top: 25px;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px 15px;
+  font-family: "Anek Devanagari", sans-serif;
+  border-radius: 25px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-link:hover {
+  background-color: #ff6600;
+  color: white;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1150px) {
+  .navbar-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed; /* Change to fixed for full-screen overlay */
+    top: 0;
+    right: -100vw; /* Initially hidden off-screen */
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(
+      51,
+      51,
+      51,
+      0.95
+    ); /* Slightly transparent background */
+    padding: 20px 0;
+    transition: right 0.3s ease; /* Smooth sliding transition */
+    z-index: 999; /* Ensure it stays above other content */
+  }
+
+  .navbar-menu.show-menu {
+    right: 0; /* Slide in from the right */
+  }
+
+  .navbar-item {
+    margin: 15px 0;
+    opacity: 1; /* Reduced opacity for items */
+  }
+
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    top: 30px; /* Adjust to align with navbar content */
+    right: 20px;
+    z-index: 1001;
+  }
+}

@@ -1,0 +1,139 @@
+/* Container for sorting and filtering */
+.sort-container {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title for the Movies section */
+.sort-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Sort section container */
+.sort-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  margin-bottom: 10px;
+}
+
+.sort-heading {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Sort options section */
+.sort-options {
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+/* Filter section container */
+.filter-section {
+  margin-top: 20px;
+}
+
+.filter-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+}
+
+.filter-heading {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Filter options section */
+.filter-options {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Search button styling */
+.search-button {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+  background-color: #122130;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .sort-title {
+    font-size: 20px;
+  }
+
+  .sort-section,
+  .filter-toggle {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sort-heading,
+  .filter-heading {
+    font-size: 16px;
+  }
+
+  .sort-container {
+    padding: 15px;
+  }
+
+  .search-button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sort-title {
+    font-size: 18px;
+  }
+
+  .sort-section,
+  .filter-toggle {
+    padding: 8px;
+  }
+
+  .sort-heading,
+  .filter-heading {
+    font-size: 14px;
+  }
+
+  .search-button {
+    padding: 10px;
+    font-size: 12px;
+  }
+}
