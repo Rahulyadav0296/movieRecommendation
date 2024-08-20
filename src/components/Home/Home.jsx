@@ -48,10 +48,11 @@ function Home() {
       {movies.length > 0 ? (
         <MovieContainer />
       ) : (
-        <div className="loading-container-movie">
+       <div className="loading-container-contain">
           <img
             src="https://i.giphy.com/jAYUbVXgESSti.webp"
             alt="Page is Loading"
+            className="loading-image"
           />
         </div>
       )}
