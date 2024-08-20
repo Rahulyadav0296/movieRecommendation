@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setMovies } from "../../utils/authSlice";
+import { setMovies, setOriginalMovies } from "../../utils/authSlice";
 import "./Home.css";
 import MovieContainer from "./Sorting/MovieList/MovieContainer";
 import Sort from "./Sorting/Sort/Sort";
@@ -30,6 +30,7 @@ function Home() {
         }
 
         dispatch(setMovies(allMovies));
+        dispatch(setOriginalMovies(allMovies));
       } catch (err) {
         console.error("Failed to fetch movies:", err);
       }
@@ -47,7 +48,7 @@ function Home() {
       {movies.length > 0 ? (
         <MovieContainer />
       ) : (
-        <div className="loading-container">
+        <div className="loading-container-movie">
           <img
             src="https://i.giphy.com/jAYUbVXgESSti.webp"
             alt="Page is Loading"
