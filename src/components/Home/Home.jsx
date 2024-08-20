@@ -1,12 +1,13 @@
-import React, { lazy, Suspense, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { setMovies } from "../../utils/authSlice";
 import "./Home.css";
+import MovieContainer from "./Sorting/MovieList/MovieContainer";
 import Sort from "./Sorting/Sort/Sort";
-const MovieContainer = lazy(() => import("./Sorting/MovieList/MovieContainer"));
 
 function Home() {
   const dispatch = useDispatch();
+  const movies = useSelector((state) => state.auth.movies);
 
   useEffect(() => {
     const fetchAllMovies = async () => {
@@ -42,18 +43,17 @@ function Home() {
       <div className="sort-container">
         <Sort />
       </div>
-      <Suspense
-        fallback={
-          <div className="loading-container">
-            <img
-              src="https://i.giphy.com/jAYUbVXgESSti.webp"
-              alt="Page is Loading"
-            />
-          </div>
-        }
-      >
+
+      {movies.length > 0 ? (
         <MovieContainer />
-      </Suspense>
+      ) : (
+        <div className="loading-container">
+          <img
+            src="https://i.giphy.com/jAYUbVXgESSti.webp"
+            alt="Page is Loading"
+          />
+        </div>
+      )}
     </div>
   );
 }
