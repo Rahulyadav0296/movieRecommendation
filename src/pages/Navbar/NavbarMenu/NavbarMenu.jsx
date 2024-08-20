@@ -63,7 +63,6 @@ function NavbarMenu() {
           Search
         </button>
       </form>
-      {noResultsMessage && <p className="no-results-message"></p>}
       <div onClick={SavedMovieList} className={"movie-icon-container"}>
         <MdMovie />
       </div>
